@@ -22,16 +22,16 @@ namespace BigOlBagOfMutators.Utilities
                 AttackDamage = character.GetAttackDamage(),
                 Health = character.GetHealth(),
                 Size = character.GetSize(),
-                Triggers = character.GetTriggers(),
+                Triggers = new List<CharacterTriggerData>(character.GetTriggers()),
                 StatusEffectImmunities = character.GetStatusEffectImmunities(),
                 CharacterPrefabVariantRef = (AssetReferenceGameObject)AccessTools.Field(typeof(CharacterData), "characterPrefabVariantRef").GetValue(character),
                 CanAttack = character.GetCanAttack(),
                 CanBeHealed = character.GetCanBeHealed(),
                 DeathSlidesBackwards = character.IsDeathSlidesBackwards(),
                 CharacterLoreTooltipKeys = character.GetCharacterLoreTooltipKeys(),
-                RoomModifiers = character.GetRoomModifiersData(),
+                RoomModifiers = new List<RoomModifierData>(character.GetRoomModifiersData()),
                 AttackTeleportsToDefender = character.IsAttackTeleportsToDefender(),
-                SubtypeKeys = (List<string>)AccessTools.Field(typeof(CharacterData), "subtypeKeys").GetValue(character),
+                SubtypeKeys = new List<string>(((List<string>)AccessTools.Field(typeof(CharacterData), "subtypeKeys").GetValue(character))),
                 CharacterSoundData = character.GetCharacterSoundData(),
                 CharacterChatterData = character.GetCharacterChatterData(),
                 DeathType = character.GetDeathType(),
@@ -41,11 +41,12 @@ namespace BigOlBagOfMutators.Utilities
                 BlockVisualSizeIncrease = character.BlockVisualSizeIncrease(),
                 AscendsTrainAutomatically = character.GetAscendsTrainAutomatically(),
             };
-
+            
             clone.StartingStatusEffects.AddRange(character.GetStartingStatusEffects());
 
             clone.SubtypeKeys.Add(VanillaSubtypeIDs.Champion);
             CharacterData cloneCharacter = clone.BuildAndRegister();
+            AccessTools.Field(typeof(CharacterData), "fallbackData").SetValue(cloneCharacter, AccessTools.Field(typeof(CharacterData), "fallbackData").GetValue(character));
 
             CardDataBuilder championCard = new CardDataBuilder
             {
@@ -69,7 +70,9 @@ namespace BigOlBagOfMutators.Utilities
                 IgnoreWhenCountingMastery = true,
                 CardLoreTooltipKeys = card.GetCardLoreTooltipKeys(),
                 ClanID = VanillaClanIDs.Hellhorned,
-
+                RequiredDLC = ShinyShoe.DLC.Hellforged,
+                LinkedMasteryCard = card,
+                SharedMasteryCards = {card},
             };
 
             CardData championCardData = championCard.BuildAndRegister();
