@@ -33,13 +33,13 @@ namespace BigOlBagOfMutators.Mutators
             {
                 UpgradeID = "MadeOfGlassFragile",
                 StatusEffectUpgrades = { fragile1 },
-                FiltersBuilders = {filterUnits},
+                FiltersBuilders = { filterUnits },
             };
             CardUpgradeDataBuilder unitsDamageShieldUpgrade = new CardUpgradeDataBuilder
             {
                 UpgradeID = "MadeOfGlassDamageShield",
                 StatusEffectUpgrades = { damageshield1 },
-                FiltersBuilders = {filterUnits},
+                FiltersBuilders = { filterUnits },
             };
 
             RelicEffectDataBuilder unitsFragile = new RelicEffectDataBuilder
@@ -95,7 +95,7 @@ namespace BigOlBagOfMutators.Mutators
 
             RelicEffectDataBuilder removePiercing = new RelicEffectDataBuilder
             {
-                RelicEffectClassType = typeof(RelicEffectAddTempUpgrade),
+                RelicEffectClassType = typeof(RelicEffectUpgradeCardOnGain),
                 ParamSourceTeam = Team.Type.Monsters,
                 ParamCardUpgradeDataBuilder = removePierceUpgrade,
             };
@@ -106,9 +106,9 @@ namespace BigOlBagOfMutators.Mutators
                 Name = "Made of Glass",
                 Description = "All units get [fragile] and [damageshield] 1. Bosses have additional [damageshield]. Piercing is removed.",
                 Effects = FormBossDamageShieldData(),
-                EffectBuilders = { unitsFragile, unitsDamageShield, heroesFragile, heroesDamageShield, removePiercing},
+                EffectBuilders = { unitsFragile, unitsDamageShield, heroesFragile, heroesDamageShield, removePiercing },
                 BoonValue = -3,
-                IconPath = "MTR_MadeOfGlass.png",
+                IconPath = "Assets/MTR_MadeOfGlass.png",
             };
 
             builder.BuildAndRegister();
@@ -116,63 +116,34 @@ namespace BigOlBagOfMutators.Mutators
 
         public static List<RelicEffectData> FormBossDamageShieldData()
         {
-            string[] bossSubtypes =
+            Dictionary<string, int> SubtypeToDamageShield = new Dictionary<string, int>
             {
-                VanillaSubtypeIDs.BossT1,
-                VanillaSubtypeIDs.BossT2,
-                VanillaSubtypeIDs.BossT3,
-            };
-
-            string[] bigBossSubtypes =
-            {
-                VanillaSubtypeIDs.BigBoss2,
-                VanillaSubtypeIDs.BigBossT1,
-                VanillaSubtypeIDs.BigBossT3,
+                [VanillaSubtypeIDs.BossT1] = 9,
+                [VanillaSubtypeIDs.BossT2] = 14,
+                [VanillaSubtypeIDs.BossT3] = 19,
+                [VanillaSubtypeIDs.BigBossT1] = 14,
+                // IDK why its just BigBoss2 instead of T2.
+                [VanillaSubtypeIDs.BigBoss2] = 19,
+                [VanillaSubtypeIDs.BigBossT3] = 39,
+                [VanillaSubtypeIDs.FinalBoss] = 49,
             };
 
             List<RelicEffectData> bossUpgrades = new List<RelicEffectData>();
 
-            foreach (string subtype in bossSubtypes)
+            foreach (var subtypeDamageShield in SubtypeToDamageShield)
             {
                 RelicEffectData relicEffect = new RelicEffectDataBuilder
                 {
                     RelicEffectClassType = typeof(RelicEffectAddStatusEffectOnSpawn),
                     ParamSourceTeam = Team.Type.Heroes,
-                    ParamCharacterSubtype = subtype,
+                    ParamCharacterSubtype = subtypeDamageShield.Key,
                     ParamStatusEffects =
                     {
-                        new StatusEffectStackData {statusId = StatusEffectDamageShieldState.StatusId, count = 9},
+                        new StatusEffectStackData {statusId = StatusEffectDamageShieldState.StatusId, count = subtypeDamageShield.Value},
                     }
                 }.Build();
                 bossUpgrades.Add(relicEffect);
             }
-
-            foreach (string subtype in bigBossSubtypes)
-            {
-                RelicEffectData relicEffect = new RelicEffectDataBuilder
-                {
-                    RelicEffectClassType = typeof(RelicEffectAddStatusEffectOnSpawn),
-                    ParamSourceTeam = Team.Type.Heroes,
-                    ParamCharacterSubtype = subtype,
-                    ParamStatusEffects =
-                    {
-                        new StatusEffectStackData {statusId = StatusEffectDamageShieldState.StatusId, count = 19},
-                    }
-                }.Build();
-                bossUpgrades.Add(relicEffect);
-            }
-
-            RelicEffectData divinityDamageShield = new RelicEffectDataBuilder
-            {
-                RelicEffectClassType = typeof(RelicEffectAddStatusEffectOnSpawn),
-                ParamSourceTeam = Team.Type.Heroes,
-                ParamCharacterSubtype = VanillaSubtypeIDs.FinalBoss,
-                ParamStatusEffects =
-                {
-                    new StatusEffectStackData {statusId = StatusEffectDamageShieldState.StatusId, count = 29},
-                }
-            }.Build();
-            bossUpgrades.Add(divinityDamageShield);
 
             return bossUpgrades;
         }

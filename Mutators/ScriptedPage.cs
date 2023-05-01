@@ -16,6 +16,7 @@ namespace BigOlBagOfMutators.Mutators
     {
         public static void Make()
         {
+
             CollectableRelicData collectableRelicData = CustomCollectableRelicManager.GetRelicDataByID(VanillaRelicIDs.BlankPages);
             RelicEffectData addChampionEffect = collectableRelicData.GetEffects()[0];
             CardPool cardPool = addChampionEffect.GetParamCardPool();
@@ -32,7 +33,7 @@ namespace BigOlBagOfMutators.Mutators
                 CollectableRelicID = "ScriptedPage",
                 Name = "Scripted Page",
                 Description = "Get a random champion at the start of battle.",
-                IconPath = "ScriptedPage.png",
+                IconPath = "Assets/ScriptedPage.png",
                 RelicPoolIDs = new List<string>(),
                 EffectBuilders = { addChampion },
             };
@@ -56,7 +57,8 @@ namespace BigOlBagOfMutators.Mutators
                 },
                 BoonValue = -3,
                 Tags = new List<string> { "champion" },
-                IconPath = "MTR_ScriptedPage.png",
+                IconPath = "Assets/MTR_ScriptedPage.png",
+                RequiredDLC = ShinyShoe.DLC.Hellforged,
             };
 
             scriptedPage.BuildAndRegister();

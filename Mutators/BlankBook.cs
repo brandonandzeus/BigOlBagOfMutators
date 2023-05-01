@@ -32,7 +32,7 @@ namespace BigOlBagOfMutators.Mutators
                 CollectableRelicID = "BlankBook",
                 Name = "Blank Book",
                 Description = "Get a random champion at the start of the turn if you don't have one in your hand.",
-                IconPath = "BlankBook.png",
+                IconPath = "Assets/BlankBook.png",
                 RelicPoolIDs = new List<string>(),
                 EffectBuilders = { addChampionV1 },
             };
@@ -54,9 +54,10 @@ namespace BigOlBagOfMutators.Mutators
                         ParamRelic = relicEmptyBookV1.BuildAndRegister(),
                     },
                 },
-                BoonValue = 2,
+                BoonValue = 4,
                 Tags = new List<string> { "champion" },
-                IconPath = "MTR_BlankBook.png",
+                IconPath = "Assets/MTR_BlankBook.png",
+                RequiredDLC = ShinyShoe.DLC.Hellforged,
             };
 
             blankPages.BuildAndRegister();
