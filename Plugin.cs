@@ -29,11 +29,20 @@ namespace BigOlBagOfMutators
 
         public void Initialize()
         {
-            // Discover all Mutator classes and building them.
+            // Discover all Mutator classes and build them.
             var assembly = Assembly.GetExecutingAssembly();
             foreach (var type in assembly.GetTypes())
             {
                 var method = type.GetMethod("Make", BindingFlags.Static | BindingFlags.Public);
+                if (method != null)
+                {
+                    method.Invoke(null, null);
+                }
+            }
+            // Discover all Challenge classes and build them.
+            foreach (var type in assembly.GetTypes())
+            {
+                var method = type.GetMethod("MakeChallenge", BindingFlags.Static | BindingFlags.Public);
                 if (method != null)
                 {
                     method.Invoke(null, null);
