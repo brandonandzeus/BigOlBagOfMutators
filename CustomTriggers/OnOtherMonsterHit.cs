@@ -22,7 +22,7 @@ namespace BigOlBagOfMutators.CustomTriggers
             public int hp;
             public int armor;
         }
-
+        
         private static CharacterHpState hpState = new CharacterHpState();
         public static List<CharacterState> outCharacters = new List<CharacterState>();
 
@@ -65,6 +65,8 @@ namespace BigOlBagOfMutators.CustomTriggers
                 }
                 yield return ___combatManager.QueueAndRunTrigger(character, OnOtherMonsterHit.MonsterTrigger, fireTriggersData: new CharacterState.FireTriggersData
                 {
+                    // This hack is used to get the LastAttackerCharacter in CardEffects.
+                    // Set TargetMode.LastAttackedCharacter, unintuitive, but that's how the code for overrideTargetCharacter was written.
                     overrideTargetCharacter = __instance.GetLastAttackerCharacter(),
                 });
                 if (__instance.GetHasSubtype(SubtypeManager.GetSubtypeData(VanillaSubtypeIDs.Imp)))

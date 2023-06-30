@@ -65,10 +65,6 @@
       <HintPath>..\TrainworksModdingTools\TrainworksModdingTools.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="TrainworksModdingToolsExtended">
-      <HintPath>..\TrainworksModdingToolsExtended\TrainworksModdingToolsExtended.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
   </ItemGroup>
 
 </Project>

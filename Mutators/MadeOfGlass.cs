@@ -25,7 +25,7 @@ namespace BigOlBagOfMutators.Mutators
 
             CardUpgradeMaskDataBuilder filterUnits = new CardUpgradeMaskDataBuilder
             {
-                CardUpgradeMaskDataID = "MadeOfGlassUnits",
+                CardUpgradeMaskID = "MadeOfGlassUnits",
                 CardType = CardType.Monster,
             };
 
