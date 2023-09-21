@@ -14,12 +14,11 @@ namespace BigOlBagOfMutators
     [BepInProcess("MonsterTrain.exe")]
     [BepInProcess("MtLinkHandler.exe")]
     [BepInDependency("tools.modding.trainworks")]
-    [BepInDependency("tools.modding.trainworks.extended")]
     public class Plugin : BaseUnityPlugin, IInitializable
     {
         public const string MODGUID = "bag.of.mutators";
         public const string MODNAME = "BigOlBagOfMutators";
-        public const string VERSION = "1.0";
+        public const string VERSION = "1.1";
 
         private void Awake()
         {
