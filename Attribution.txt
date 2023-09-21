@@ -2,5 +2,7 @@
 <a href="https://www.flaticon.com/free-icons/heartbeat" title="heartbeat icons">Heartbeat icons created by DinosoftLabs - Flaticon</a>
 <a href="https://www.flaticon.com/free-icons/books" title="books icons">Books icons created by Freepik - Flaticon</a>
 <a href="https://www.flaticon.com/free-icons/scroll" title="scroll icons">Scroll icons created by Smashicons - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/cultures" title="cultures icons">Cultures icons created by Freepik - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/nuclear" title="nuclear icons">Nuclear icons created by Freepik - Flaticon</a>
 <a href="https://www.flaticon.com/free-icons/hammer" title="hammer icons">Hammer icons created by Freepik - Flaticon</a>
 <a href="https://www.flaticon.com/free-icons/experiment" title="experiment icons">Experiment icons created by Freepik - Flaticon</a>
