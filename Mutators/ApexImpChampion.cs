@@ -92,7 +92,7 @@ namespace BigOlBagOfMutators.Mutators
                 Trigger = OnOtherMonsterHit.ImpTrigger,
                 AdditionalTextOnTrigger = "Counter!",
                 AdditionalTextOnTriggerKey = "ProtectiveIII_CharacterTriggerData_AdditionalTextOnTriggerKey",
-                Description = "Deal damage equal to 2 times the unit's [armor].",
+                Description = "Deal damage equal to two times the unit's [armor].",
                 EffectBuilders = { damageByArmorIII },
             };
             CardUpgradeDataBuilder shieldedIII = new CardUpgradeDataBuilder

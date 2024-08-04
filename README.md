@@ -31,6 +31,58 @@ Installation is handled through [steam workshop](https://steamcommunity.com/shar
 | ![](Assets/MTR_Stampede.png)<br/>**Stampede!**                                                        | All units get <b>Trample</b>                                                                                          |                                                                                                                                                                                   | No           | 2.0       |
 | ![](Assets/MTR_Colony.png)<br/>**The Colony**                                                         | Replaces Train Stewards with Spikedriver Colony with +5 attack and +5 health.                                         | The associated Heph Cavern Event is excluded from appearing in this mutator, meaning the Spikedriver Colony units will continue replicating.                                      | No           | 2.0       |
 | ![](Assets/MTR_VineGrandmother.png)<br/>**Vine Grandmother**                                          | Replaces your champion with <b>Champion</b> Vinemother.                                                               |                                                                                                                                                                                   | No           | 2.0       |
-| ![](Assets/MTR_WereAllRobots.png)<br/>We're All Robots                                                | Friendly Units enter with <b>Inert</b> and '<b>Incant</b>: Gain <b>Fuel 1</b>'                                        |                                                                                                                                                                                   | No           | 2.0       |
+| ![](Assets/MTR_WereAllRobots.png)<br/>**We're All Robots**                                            | Friendly Units enter with <b>Inert</b> and '<b>Incant</b>: Gain <b>Fuel 1</b>'                                        |                                                                                                                                                                                   | No           | 2.0       |
 
+## Champion Mutators
 
+### ![](Assets/MTR_ApexOfAllImps.png) Apex of All Imps
+
+#### Champion Upgrades
+
+##### Protective
+
+This upgrade allows Apex Imp to counter attack whenever an Imp unit on the floor is damaged dealing damage equal to some proportion of Apex Imp's armor.
+
+###### Protective I
+
+**Armor 5** and Deals damage equal to half of Apex Imp's armor
+
+###### Protective II
+
+**Armor 15** and Deals damage equal to Apex Imp's armor
+
+###### Protective III
+
+**Armor 25** and Deals damage equal to two times Apex Imp's armor
+
+##### Rousing
+
+This upgrade applies rage to all imps in the room whenever Apex Imp takes damage
+
+###### Rousing I
+
+**Armor 5** and **Revenge**: Apply **Rage 3** to all imps in the room.
+
+###### Rousing II
+
+**Armor 10** and **Revenge**: Apply **Rage 5 **to all imps in the room.
+
+###### Rousing III
+
+**Armor 15** and **Revenge**: Apply **Rage 8** to all imps in the room.
+
+##### Light Armor
+
+This upgrade just gives Apex Imp fragile for exchange for multistrike.
+
+###### Light Armor I
+
+Armor 5 and **Multistrike 1**
+
+###### Light Armor II
+
+**Armor 10** and **Multistrike 2**
+
+###### Light Armor III
+
+**Armor 15** and **Multistrike 3**
