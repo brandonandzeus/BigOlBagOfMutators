@@ -266,7 +266,7 @@ namespace BigOlBagOfMutators.Mutators
                 },
                 BoonValue = 3,
                 Tags = new List<string> { "champion" },
-                IconPath = "Assets/PRT_ApexImp_01.png",
+                IconPath = "Assets/MTR_ApexOfAllImps.png",
                 RequiredDLC = ShinyShoe.DLC.Hellforged,
             };
 
@@ -275,6 +275,7 @@ namespace BigOlBagOfMutators.Mutators
             BuilderUtils.ImportStandardLocalization("Trigger_OnOtherImpHit_CardText", "Imp Counter");
             BuilderUtils.ImportStandardLocalization("Trigger_OnOtherImpHit_CharacterText", "Imp Counter");
             BuilderUtils.ImportStandardLocalization("Trigger_OnOtherImpHit_TooltipText", "Triggers when another [imp] is attacked.");
+            CustomCharacterManager.AddCustomTriggerIcon(OnOtherMonsterHit.ImpTrigger, "Assets/trigger_impcounter.png", "Assets/trigger_impcounter_tooltip.png");
         }
     }
 

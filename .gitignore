@@ -1,0 +1,7 @@
+*.v2
+/.vs/BigOlBagOfMutators/FileContentIndex/*.vsidx
+.vs
+BigOlBagOfMutators
+netstandard2.0
+obj
+/Distribution

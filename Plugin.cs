@@ -18,7 +18,7 @@ namespace BigOlBagOfMutators
     {
         public const string MODGUID = "bag.of.mutators";
         public const string MODNAME = "BigOlBagOfMutators";
-        public const string VERSION = "1.1";
+        public const string VERSION = "2.0";
 
         private void Awake()
         {

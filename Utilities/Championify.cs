@@ -6,6 +6,7 @@ using Trainworks.ConstantsV2;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using HarmonyLib;
+using Trainworks.Utilities;
 
 namespace BigOlBagOfMutators.Utilities
 {
@@ -13,18 +14,18 @@ namespace BigOlBagOfMutators.Utilities
     {
         public static Dictionary<CharacterData, CardUpgradeTreeData> FakeChampions = new Dictionary<CharacterData, CardUpgradeTreeData>();
 
-        public static CardData TurnCharacterIntoChampion(CharacterData character, CardData card, CardUpgradeTreeData upgradeTreeData)
+        public static CardData TurnCharacterIntoChampion(CharacterData character, CardData card, CardUpgradeTreeData upgradeTreeData, int? overrideAttack = null, int? overrideHealth = null, int? overrideSize = null, BundleAssetLoadingInfo bundleInfo = null)
         {
             CharacterDataBuilder clone = new CharacterDataBuilder
             {
                 CharacterID = character.name + "_Champion",
                 NameKey = character.GetNameKey(),
-                AttackDamage = character.GetAttackDamage(),
-                Health = character.GetHealth(),
-                Size = character.GetSize(),
+                AttackDamage = overrideAttack ?? character.GetAttackDamage(),
+                Health = overrideHealth ?? character.GetHealth(),
+                Size = overrideSize ?? character.GetSize(),
                 Triggers = new List<CharacterTriggerData>(character.GetTriggers()),
                 StatusEffectImmunities = character.GetStatusEffectImmunities(),
-                CharacterPrefabVariantRef = (AssetReferenceGameObject)AccessTools.Field(typeof(CharacterData), "characterPrefabVariantRef").GetValue(character),
+                CharacterPrefabVariantRef = (bundleInfo == null) ? (AssetReferenceGameObject)AccessTools.Field(typeof(CharacterData), "characterPrefabVariantRef").GetValue(character) : null,
                 CanAttack = character.GetCanAttack(),
                 CanBeHealed = character.GetCanBeHealed(),
                 DeathSlidesBackwards = character.IsDeathSlidesBackwards(),
@@ -40,6 +41,7 @@ namespace BigOlBagOfMutators.Utilities
                 ProjectilePrefab = character.GetProjectilePrefab(),
                 BlockVisualSizeIncrease = character.BlockVisualSizeIncrease(),
                 AscendsTrainAutomatically = character.GetAscendsTrainAutomatically(),
+                BundleLoadingInfo = bundleInfo
             };
             
             clone.StartingStatusEffects.AddRange(character.GetStartingStatusEffects());
@@ -69,8 +71,8 @@ namespace BigOlBagOfMutators.Utilities
                 CardArtPrefabVariantRef = (AssetReferenceGameObject)AccessTools.Field(typeof(CardData), "cardArtPrefabVariantRef").GetValue(card),
                 IgnoreWhenCountingMastery = true,
                 CardLoreTooltipKeys = card.GetCardLoreTooltipKeys(),
-                ClanID = VanillaClanIDs.Hellhorned,
-                RequiredDLC = ShinyShoe.DLC.Hellforged,
+                ClanID = card.GetLinkedClassID(),
+                RequiredDLC = card.GetRequiredDLC(),
                 LinkedMasteryCard = card,
                 SharedMasteryCards = {card},
             };
