@@ -37,6 +37,8 @@ Installation is handled through [steam workshop](https://steamcommunity.com/shar
 
 ### ![](Assets/MTR_ApexOfAllImps.png) Apex of All Imps
 
+Base stats: Unchanged.
+
 #### Champion Upgrades
 
 ##### Protective
@@ -77,7 +79,7 @@ This upgrade just gives Apex Imp fragile for exchange for multistrike.
 
 ###### Light Armor I
 
-Armor 5 and **Multistrike 1**
+**Armor 5** and **Multistrike 1**
 
 ###### Light Armor II
 
@@ -86,3 +88,90 @@ Armor 5 and **Multistrike 1**
 ###### Light Armor III
 
 **Armor 15** and **Multistrike 3**
+
+
+
+### ![](Assets/MTR_VineGrandmother.png) **Vinegrandmother**
+
+Base status: 0 Attack, 10 Health (down from 35).
+
+#### Champion Upgrades
+
+Specializing 2 levels in a specific upgrade path and Vinemother will spawn a Channeler appropriate for the upgrade path you chose.
+
+##### Frenzy
+
+Vinemother buffs the entire floor is a Sting spell is played on the floor. Sting spells have consume on the floor.
+
+###### Frenzy I
+
+Vinemother: +10 Attack +10 Health
+Units gain +2 attack.
+
+###### Frenzy II
+
+Vinemother: +10 Attack +30 Health
+
+Frenzied Channeler spawns on the floor with +10 attack and +5 health. (Enchant: Grant Multistrike 1)
+
+Units gain +3 attack.
+
+###### Frenzy III
+
+Vinemother: +25 Attack +60 Health
+
+Frenzied Channeler spawns on the floor with +20 attack and +10 health. (Enchant: Grant Multistrike 1)
+
+Units gain +4 attack.
+
+##### Ensnaring
+
+Vinemother gains spikes when a Sting spell is played. Units that attack Vinemother become Rooted.
+
+###### Ensnaring I
+
+Vinemother: +0 Attack +20 Health
+
+Vinemother gains **Spikes 2** per Sting played
+
+###### Ensnaring II
+
+Vinemother: +0 Attack +50 Health
+
+Shard Channeler spawns on the floor
+
+Vinemother gains **Spikes 3** per Sting played
+
+###### Ensnaring III
+
+Vinemother: +0 Attack +110 Health
+
+Shard Channeler spawns on the floor
+
+Vinemother gains **Spikes 5** per Sting played
+
+##### Grafting
+
+Units spawned on the floor with Vinemother will gain maxhp. Vinemother has sweep and Harvest (enemy units) will apply Regen to friendly units on the floor. Note that the max hp bonus is temporary (think Awoken Hollow's spawn effect).
+
+###### Grafting I
+
+Vinemother: +5 Attack +15 Health
+
+Units spawned gain +10 maxhp. Vinemother has **Harvest**: Apply **Regen 1** to friendly units.
+
+###### Grafting II
+
+Vinemother: +15 Attack +35 Health
+
+Edge Prior spawns on the floor
+
+Units spawned gain +20 maxhp. Vinemother has **Harvest**: Apply **Regen 1** to friendly units.
+
+###### Grafting III
+
+Vinemother: +25 Attack +85 Health
+
+Edge Prior spawns on the floor
+
+Units spawned gain +40 maxhp. Vinemother has **Harvest**: Apply **Regen 2** to friendly units.
