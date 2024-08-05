@@ -41,53 +41,11 @@ Base stats: Unchanged.
 
 #### Champion Upgrades
 
-##### Protective
-
-This upgrade allows Apex Imp to counter attack whenever an Imp unit on the floor is damaged dealing damage equal to some proportion of Apex Imp's armor.
-
-###### Protective I
-
-**Armor 5** and Deals damage equal to half of Apex Imp's armor
-
-###### Protective II
-
-**Armor 15** and Deals damage equal to Apex Imp's armor
-
-###### Protective III
-
-**Armor 25** and Deals damage equal to two times Apex Imp's armor
-
-##### Rousing
-
-This upgrade applies rage to all imps in the room whenever Apex Imp takes damage
-
-###### Rousing I
-
-**Armor 5** and **Revenge**: Apply **Rage 3** to all imps in the room.
-
-###### Rousing II
-
-**Armor 10** and **Revenge**: Apply **Rage 5 **to all imps in the room.
-
-###### Rousing III
-
-**Armor 15** and **Revenge**: Apply **Rage 8** to all imps in the room.
-
-##### Light Armor
-
-This upgrade just gives Apex Imp fragile for exchange for multistrike.
-
-###### Light Armor I
-
-**Armor 5** and **Multistrike 1**
-
-###### Light Armor II
-
-**Armor 10** and **Multistrike 2**
-
-###### Light Armor III
-
-**Armor 15** and **Multistrike 3**
+|             | Description                                                                                                                                              | I                                                                       | II                                                                      | III                                                                      |
+| ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| Protective  | This upgrade allows Apex Imp to counter attack whenever an Imp unit on the floor is damaged dealing damage equal to some proportion of Apex Imp's armor. | **Armor 5**<br/><br/>Deals damage equal to half of Apex Imp's armor.    | **Armor 15**<br/><br/>Deals damage equal to Apex Imp's armor.           | **Armor 25** <br/><br/>Deals damage equal to two times Apex Imp's armor. |
+| Rousing     | This upgrade applies rage to all imps in the room whenever Apex Imp takes damage                                                                         | **Armor 5** <br/>**Revenge**: Apply **Rage 3** to all imps in the room. | **Armor 10**<br/>**Revenge**: Apply **Rage 5** to all imps in the room. | **Armor 15**<br/>**Revenge**: Apply **Rage 8** to all imps in the room.  |
+| Light Armor | This upgrade just gives Apex Imp fragile for exchange for multistrike.                                                                                   | **Armor 5**<br/>**Multistrike 1**                                       | **Armor 10**<br/>**Multistrike 2**                                      | **Armor 15** <br/>**Multistrike 3**                                      |
 
 
 
@@ -97,81 +55,32 @@ Base status: 0 Attack, 10 Health (down from 35).
 
 #### Champion Upgrades
 
+|           | Description                                                                                                                                                                                                                               | I                                                                                                                            | II                                                                                                                            | III                                                                                                                           |
+| --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| Frenzy    | Vinemother buffs the entire floor is a Sting spell is played on the floor. Sting spells have consume on the floor.                                                                                                                        | +10 Attack +10 Health<br/>Units gain +2 Attack.                                                                              | +10 Attack +30 Health<br/>Units gain +3 Attack.                                                                               | +25 Attack +60 Health<br/>Units gain +4 Attack.                                                                               |
+| Ensnaring | Vinemother gains spikes when a Sting spell is played. Units that attack Vinemother become Rooted.                                                                                                                                         | +0 Attack +20 Health<br/><br/>Vinemother gains **Spikes 2** per Sting played.                                                | +0 Attack +50 Health<br/><br/>Vinemother gains **Spikes 3** per Sting played.                                                 | +0 Attack +110 Health<br/><br/>Vinemother gains **Spikes 5** per Sting played.                                                |
+| Grafting  | Units spawned on the floor with Vinemother will gain maxhp. Vinemother has sweep and Harvest (enemy units) will apply Regen to friendly units on the floor. Note that the max hp bonus is temporary (think Awoken Hollow's spawn effect). | +5 Attack +15 Health<br/><br/>Units spawned gain +10 maxhp. Vinemother has **Harvest**: Apply **Regen 1** to friendly units. | +15 Attack +35 Health<br/><br/>Units spawned gain +20 maxhp. Vinemother has **Harvest**: Apply **Regen 1** to friendly units. | +25 Attack +85 Health<br/><br/>Units spawned gain +40 maxhp. Vinemother has **Harvest**: Apply **Regen 2** to friendly units. |
+
+##### Bonus
+
 Specializing 2 levels in a specific upgrade path and Vinemother will spawn a Channeler appropriate for the upgrade path you chose.
 
-##### Frenzy
 
-Vinemother buffs the entire floor is a Sting spell is played on the floor. Sting spells have consume on the floor.
 
-###### Frenzy I
+###### Frenzy
 
-Vinemother: +10 Attack +10 Health
-Units gain +2 attack.
+Frenzied Channeler is spawned when Vinemother is summoned. Frenzied Channeler is a new unit specifically for this mutator. Its effect is **Enchant**: Grant **Multistrike 1**
 
-###### Frenzy II
+II: +10 Attack and +5 Health.
 
-Vinemother: +10 Attack +30 Health
+III:  +20 Attack and +10 Health.
 
-Frenzied Channeler spawns on the floor with +10 attack and +5 health. (Enchant: Grant Multistrike 1)
+###### Ensnaring II/III
 
-Units gain +3 attack.
+Shard Channeler is spawned when Vinemother is summoned.
 
-###### Frenzy III
+###### Grafting II/III
 
-Vinemother: +25 Attack +60 Health
+Edge Prior is spawned when Vinemother is summoned.
 
-Frenzied Channeler spawns on the floor with +20 attack and +10 health. (Enchant: Grant Multistrike 1)
 
-Units gain +4 attack.
-
-##### Ensnaring
-
-Vinemother gains spikes when a Sting spell is played. Units that attack Vinemother become Rooted.
-
-###### Ensnaring I
-
-Vinemother: +0 Attack +20 Health
-
-Vinemother gains **Spikes 2** per Sting played
-
-###### Ensnaring II
-
-Vinemother: +0 Attack +50 Health
-
-Shard Channeler spawns on the floor
-
-Vinemother gains **Spikes 3** per Sting played
-
-###### Ensnaring III
-
-Vinemother: +0 Attack +110 Health
-
-Shard Channeler spawns on the floor
-
-Vinemother gains **Spikes 5** per Sting played
-
-##### Grafting
-
-Units spawned on the floor with Vinemother will gain maxhp. Vinemother has sweep and Harvest (enemy units) will apply Regen to friendly units on the floor. Note that the max hp bonus is temporary (think Awoken Hollow's spawn effect).
-
-###### Grafting I
-
-Vinemother: +5 Attack +15 Health
-
-Units spawned gain +10 maxhp. Vinemother has **Harvest**: Apply **Regen 1** to friendly units.
-
-###### Grafting II
-
-Vinemother: +15 Attack +35 Health
-
-Edge Prior spawns on the floor
-
-Units spawned gain +20 maxhp. Vinemother has **Harvest**: Apply **Regen 1** to friendly units.
-
-###### Grafting III
-
-Vinemother: +25 Attack +85 Health
-
-Edge Prior spawns on the floor
-
-Units spawned gain +40 maxhp. Vinemother has **Harvest**: Apply **Regen 2** to friendly units.
